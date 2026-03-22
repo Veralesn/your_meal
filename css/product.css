@@ -22,11 +22,11 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
-  color: #000;
   flex-grow: 1;
   margin-bottom: 4px;
 }
 .product__detail {
+  color: #000;
   outline: none; /*!todo outline*/
 }
 .product__weight {
