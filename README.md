@@ -8,5 +8,5 @@ HTML и CSS
 
 Адаптив  
 
-<code>[Your Meal_portfolio](veralesn.github.io/your_meal/)
+<code>[Your Meal_portfolio](https://veralesn.github.io/your_meal/)
 </code>
