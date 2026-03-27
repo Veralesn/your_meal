@@ -266,19 +266,103 @@
         </address>
         <div class="footer__development">
           <p>© YouMeal, 2022</p>
-          <p>Design: <a href="#">Anastasia Ilina</a></p>
+          <p class="footer__link_development">Design: <a href="#">Anastasia Ilina</a></p>
           <!-- <p>Developer: <a href="#">Anastasia Ilina</a></p> -->
         </div>
         </div>
       </div>
     </footer>
 
+    <div class="modal modal_product"> <!--/* modal_open */ добавляем, если нужно видеть модальное окно -->
+      <div class="modal__main modal-product">
+        <div class="modal-product__container">
+          <h2 class="modal-product__title">Мясная бомба</h2>
+          <div class="modal-product__content">
+            <img src="img/photo-5.jpg" alt="Мясная бомба" class="modal-product__img">
+            <p class="modal-product__description">Супер мясное наслаждение! Большая рубленая котлета из свежего говяжего мяса покорит вас своей сочностью, а хрустящие листья салата добавят свежести.</p>
+            <div class="modal-product__ingredients ingredients">
+              <h3 class="ingredients__title">Состав</h3>
+              <ul class="ingredients__list">
+                <li class="ingredients__item">Пшеничная булочка</li>
+                <li class="ingredients__item">Котлета из говядины</li>
+                <li class="ingredients__item">Красный лук</li>
+                <li class="ingredients__item">Листья салата</li>
+                <li class="ingredients__item">Соус сорчичный</li>
+              </ul>
+              <p class="ingredients__calories">520г, ккал 430</p>
+            </div>
+          </div>
+          <div class="modal-product__footer">
+            <div class="modal-product__add">
+              <button class="modal-product__btn">Добавить</button>
+                <div class="modal-product__count count">
+                  <button class="count__minus">-</button>
+                    <p class="count__amount">1</p>
+                  <button class="count__plus">+</button>
+                </div>             
+              </div>
+              <p class="modal-product__price">689<span class="currency">₽</span></p>
+            </div>
+        </div>
+        <buuton class="modal__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5.0752" y="5.28249" width="1" height="20" transform="rotate(-45 5.0752 5.28249)"/>
+            <rect x="5.78223" y="19.4246" width="1" height="20" transform="rotate(-135 5.78223 19.4246)"/>
+          </svg>
+        </buuton>
+      </div>
+    </div>
+
+    <div class="modal modal_delivery"> <!--/* modal_open */ добавляем, если нужно видеть модальное окно -->
+      <div class="modal__main modal-delivery">
+        <div class="modal-delivery__container">
+          <h2 class="modal-delivery__title">Доставка</h2>
+          <form action="" class="modal-delivery__form" id="delivery">
+            <fieldset class="modal-delivery__fieldset">
+              <input class="modal-delivery__input" type="text" name="name" placeholder="Ваше имя">
+              <input class="modal-delivery__input" type="tel" name="phone" placeholder="Телефон">
+            </fieldset>
+
+            <fieldset class="modal-delivery__fieldset  modal-delivery__fieldset_radio">
+              <label class="modal-delivery__label">
+                <input class="modal-delivery__radio" type="radio" name="format" value="pickup">
+                  <span>Самовывоз</span>
+              </label>    
+              <label class="modal-delivery__label">
+                <input class="modal-delivery__radio" type="radio" name="format" value="delivery" checked>
+                  <span>Доставка</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="modal-delivery__fieldset">
+              <input class="modal-delivery__input" type="text" name="address" placeholder="Улица, дом, квартира">
+              <input class="modal-delivery__input modal-delivery__input_half" type="number" name="floor" placeholder="Этаж">
+              <input class="modal-delivery__input modal-delivery__input_half" type="number" name="intercom" placeholder="Домофон">
+            </fieldset>
+          </form>
+          <button class="modal-delivery__submit" type="submit" form="delivery">Оформить</button>
+        </div>
+        <buuton class="modal__close" type="button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5.0752" y="5.28249" width="1" height="20" transform="rotate(-45 5.0752 5.28249)"/>
+            <rect x="5.78223" y="19.4246" width="1" height="20" transform="rotate(-135 5.78223 19.4246)"/>
+          </svg>
+        </buuton>
+      </div>
+    </div>
 
 
 <script>
 document.querySelector('.order__wrap-title').addEventListener('click', () => {
   document.querySelector('.order').classList.toggle('order_open')
 })
+document.querySelector('.product__add').addEventListener('click', () => {
+  document.querySelector('.modal').classList.toggle('modal_open')
+})
+document.querySelector('.modal__close').addEventListener('click', () => {
+  document.querySelector('.modal').classList.toggle('modal_open')
+})
+
 </script>
 
   </body>
