@@ -27,6 +27,7 @@
   margin-bottom: 4px;
 }
 .product__detail {
+  color: #000;
   outline: none;
 }
 .product__detail:hover,
